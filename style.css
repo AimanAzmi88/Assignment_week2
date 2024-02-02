@@ -56,10 +56,11 @@ header{
 .headerText > li > a:hover{
     color: #f4ce47;
 }
-.bannerWrap{
-    overflow: hidden;
-}
 @media (max-width: 740px) {
+    .centre{
+        width: 432px;
+        align-items: center;
+    }
    
     header{
         flex-direction: column;
@@ -71,18 +72,20 @@ header{
         flex-direction: column;
         align-items: center;
     }
-    .bannerWrap{
-        overflow: hidden;
-    }
     .banner{
-        margin-top: 22px;
-        margin-bottom: 16px;
+      
     }
+}
+.bannerWrap{
+    background-color: #f4ce47;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
 }
 .banner{
     display: flex;
     flex-direction: row;
-    background-color: #f4ce47;
     list-style: none;
     height: 80px;
     gap: 65px;
@@ -91,7 +94,6 @@ header{
     width: 1728px;
     height: 80px;
     margin: 15px auto;
-    overflow: hidden;
     text-wrap: nowrap;
     
 }
