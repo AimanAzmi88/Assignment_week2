@@ -1,36 +1,37 @@
-body{
-    background-color: white;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+*{
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
+    text-decoration: none;
 }
-.header{
+header{
     background-color: #2a2c2e;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    border-radius: 20px;
-    flex-shrink: 0;
+    align-items: center;
+    width: 1200px;
+    height: 96px;
     padding: 20px 24px;
-   
+    margin: 15px auto;
+    border-radius: 20px;
 }
 .headerText{
-    list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
+    flex-direction: row;
+    list-style: none;
     font-size: 20px;
+    gap: 32px;
 }
-    
+.headerText> li> a{
+    color: whitesmoke;
+} 
 .navRight{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     gap: 40px;
     align-items: center;
 }
@@ -42,124 +43,177 @@ body{
 }
 .headerButton{
     background-color: #f4ce47;
-    border-radius: 16px;
-    height: 56px;
-    width: 106px;
+    border-radius: 12px;
+    padding: 16px 28px;
+    border: 0;
 }
-
-/*banner*/
-
+.headerText > li > a:hover{
+    color: #f4ce47;
+}
+@media (max-width: 740px) {
+    header{
+        flex-direction: column;
+        width: 430px;
+        height: 413px;
+        padding-bottom: 16px;
+    }
+    header > .headerText{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
 .banner{
-    list-style: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     background-color: #f4ce47;
+    list-style: none;
+    height: 80px;
+    gap: 65px;
     justify-content: center;
     align-items: center;
-    gap: 24px;
-    padding: 12px;
+    width: 1728px;
+    height: 80px;
+    margin: 15px auto;
+}
+.banner > h2{
+    color: #f4ba40;
+    font-size: 48px;
+    font-weight: 400;
+}
+.banner> h2.bannerMidtext{
+    color: #2a2c2e;
 }
 main{
     background-color: #2a2c2e;
-    padding: 50px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    justify-content: center;
+    width: 1729px;
+    height: 1874px;
+    margin: 15px auto;
 }
-section{
+main > .container{
+    width: 898px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 8px;
+    padding: 16px 0;
 }
-.cardRow
-
+@media (max-width: 740px){
+    main{
+        width: 432px;
+        height: auto;
+    }
+    main > .container{
+        flex-direction: column;
+        width: 294px;
+        height: auto;
+    }
+}
 .card{
-    background-color: rgb(255, 255, 255);
-    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 577px;
+    width: 294px;
     border-radius: 20px;
-    padding: 24px;
-    align-content: flex-start;
+    padding: 25px;
+    
+    
 }
-.name{
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
+.card > div > img{
+    width: 246px;
+    height: 357px;
+    border-radius: 20px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 246px;
+    height: 164px;
+    gap: 35px;
+    
 }
 .author{
     font-size: 14px;
-    margin: 0;
-    font-weight: 400;
+    opacity: 60%;
 }
 .tittle{
     font-size: 16px;
-    margin: 0;
-    font-weight: 400;
+    opacity: 87%;
+    font-weight: bold;
+    height: 24px;
 }
 .comment{
     display: flex;
     flex-direction: row;
-    padding-left: 0;
-    gap: 4px;
+    gap: 10px;
 }
-.comment li{
-    list-style: none;
-    border: 1px solid black;
-    border-radius: 31px;
-    padding: 8px 12px;
+.comment > p{
+    display: flex;
+    flex-direction: row;
+    gap:4px;
+    padding:8px 12px;
+    border:1px solid black;
+    border-radius:30px;
 }
 .price{
-    list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 8px;
-    padding-left: 0;
+    gap: 10px;
 }
-.priceBefore{
-    opacity: 38%;
+.price > p{
+    font-size: 18px;
 }
-
-/*footer*/
+.price > p:first-child{
+    text-decoration: line-through;
+    opacity: 40%;
+}
 footer{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    max-width: 1200px;
-    margin: 10px auto;
+    width: 1248px;
+    padding-top: 20px;
+    margin: 0 auto;
 }
-
-.topFooter{
+footer > .topFooter{
     background-color: #2a2c2e;
+    height: 88px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 0 24px;
 }
-
-.footerIcon{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    padding: 0 24px;
-}
-.bottomFooter{
+footer > .bottomFooter{
     background-color: #000000;
+    opacity: 87%;
+    height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;  
 }
-.leftBFooter{
+footer > .bottomFooter > div{
     display: flex;
     flex-direction: row;
-    color: white;
     gap: 16px;
-    padding: 0 24px;
+    font-size: 12px;
 }
-.rightBFooter{
-    display: flex;
-    flex-direction: row;
+footer > .bottomFooter > div > p{
     color: white;
-    gap: 16px;
-    padding: 0 24px;
+}
+@media (max-width: 740px) {
+    footer{
+        width: 430px;
+    }
+    footer > .topFooter{
+        height: 88px;
+    }
+    footer > .bottomFooter{
+        flex-direction: column;
+        height: 72px;
+        gap: 16px;
+        justify-content: center;
+    }
 }
